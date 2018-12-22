@@ -1,9 +1,9 @@
-#ifndef _MyArray_H
-#define _MyArray_H
 /*
 Author  :   Ravi Shankar
 Email   :   shankar.ravi.awesome@gmail.com
 */
+#ifndef _MyArray_H
+#define _MyArray_H
 template<class T, int p_size>
 class MyArray
 {
