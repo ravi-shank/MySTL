@@ -29,7 +29,7 @@ public:
     T& at(int index);                             // return reference to the element pesent at index "index" (0- based indexing)
     int get_capacity() const;                     // to get the capacity of the vecotor
     bool empty() const;                           // to check if vector is empty
-    const T& operator[] (int) const;              // overloaded operator [] for constant vector
+    T& operator[] (int) const;                    // overloaded operator [] for constant immutable vector
     T& operator[] (int);                          // overloaded operator [] for mutable vector
     MyVector<T>& operator+=(MyVector<T>&v1) ;     // overloaded operator +=
     MyVector<T>& operator=(MyVector<T>&v1) ;      // overloaded operator =
@@ -191,9 +191,9 @@ bool MyVector<T>::empty() const
 // Working description: returns a reference to the element present at position index for the constant immutable vector
 // Parameters:
 //       index:  position for which reference to be returned
-// Return type:  reference to data present at positon index
+// Return type:  reference to data present at position index
 template<class T>
-const T& MyVector<T>::operator [] (int index ) const
+T& MyVector<T>::operator [] (int index ) const
 {
     return m_data[index];
 }
@@ -202,7 +202,7 @@ const T& MyVector<T>::operator [] (int index ) const
 // Working description: returns a reference to the element present at position index for the mutable vector
 // Parameters:
 //       index:  position for which reference to be returned
-// Return type:  reference to data present at positon index
+// Return type:  reference to data present at position index
 template<class T>
 T& MyVector<T>::operator [] (int index )
 {
